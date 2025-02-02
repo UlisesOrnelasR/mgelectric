@@ -1,6 +1,7 @@
-import React from 'react'
 import { motion } from 'framer-motion';
-import { slideUpVariants, zoomInVariants } from './animation';
+import { slideUpVariants } from './animation';
+import ReactPlayer from 'react-player';
+import videoFile from '../assets/ejemplo.mp4';
 
 const About = () => {
   return (
@@ -9,23 +10,60 @@ const About = () => {
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className='lg:w-[60%] w-full flex flex-col justify-center items-start gap-6'>
-        <motion.h1 variants={slideUpVariants} className=' text-yellow-500 text-2xl'>WELCOME TO</motion.h1>
-        <motion.h1 variants={slideUpVariants} className='text-white uppercase text-[40px] font-bold'>construction website</motion.h1>
-        <div className='w-[120px] h-[6px] bg-yellow-500'></div>
-        <p className='text-3xl italic text-gray-50 mt-[60px]'>We are the leader with 25 years of experience
-          in the construction market!</p>
+        className='lg:w-[60%] w-full flex flex-col justify-center items-start gap-6'
+      >
+        <motion.h1 variants={slideUpVariants} className='text-secondary text-2xl'>
+          ABOUT US
+        </motion.h1>
+        <motion.h1 variants={slideUpVariants} className='text-white uppercase text-[40px] font-bold'>
+          Powering Your Future
+        </motion.h1>
+        <div className='w-[120px] h-[6px] bg-primary'></div>
+        <p className='text-white text-lg'>
+          At MG Construction & Electrical INC., we specialize in delivering top-quality electrical services for residential, commercial, and industrial projects. With over 25 years of experience, we ensure your systems are safe, efficient, and reliable.
+        </p>
+
+        <div className='flex gap-8 mt-8'>
+          <div className='text-center'>
+            <h3 className='text-primary text-4xl font-bold'>500+</h3>
+            <p className='text-white'>Projects Completed</p>
+          </div>
+          <div className='text-center'>
+            <h3 className='text-primary text-4xl font-bold'>25+</h3>
+            <p className='text-white'>Years of Experience</p>
+          </div>
+        </div>
+        <div className='flex gap-4'>
+          <motion.button
+            variants={slideUpVariants}
+            className='bg-primary hover:bg-hover h px-10 py-3 rounded-lg text-white font-bold'
+          >
+            LEARN MORE
+          </motion.button>
+          <motion.button
+            variants={slideUpVariants}
+            className='border-primary hover:bg-hover  border-2 px-10 py-3 rounded-lg text-white font-bold'
+          >
+            GET A FREE QUOTE
+          </motion.button>
+        </div>
       </motion.div>
+
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className='lg:w-[40%] w-full flex flex-col justify-center items-start gap-6'>
-        <p className='text-white text-lg text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, repellendus voluptatem eius dicta, tempore atque velit cum minus ut quidem architecto corrupti in, veritatis deserunt consequuntur. Accusantium esse porro placeat, ipsa ratione dolore culpa maiores tenetur laboriosam. Ex est eveniet hic corrupti. Voluptatibus itaque voluptate nulla laboriosam. Cumque sequi nihil quae quia neque corrupti nesciunt possimus. Architecto doloremque ullam molestiae quidem eos praesentium, velit minima facilis voluptas asperiores eaque accusantium ipsam dicta, ducimus officia repellendus vel quae laborum eligendi deserunt non. Assumenda molestias est molestiae fugit fuga, alias necessitatibus sequi quasi libero ex modi hic dignissimos facere et quisquam deleniti.</p>
-        <motion.button variants={slideUpVariants} className='bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg text-black font-bold'>READ MORE</motion.button>
+        className='lg:w-[40%] w-full flex justify-center'
+      >
+        <ReactPlayer
+          url={videoFile}
+          controls
+          width="100%"
+          height="300px"
+        />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
