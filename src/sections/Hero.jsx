@@ -1,5 +1,5 @@
 import electricianImage from '../assets/electrician-hero.jpg';
-import backgroundImage from '../assets/electrician-bg.jpg';
+import backgroundImage from '../assets/electrician-bg2.jpg';
 import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
 
@@ -22,7 +22,7 @@ const Hero = () => {
       >
         <motion.h1
           variants={slideUpVariants}
-          className='text-yellow-400 text-2xl'
+          className='text-secondary text-2xl'
         >
           YOUR TRUSTED ELECTRICAL PARTNERS
         </motion.h1>
@@ -32,9 +32,9 @@ const Hero = () => {
         >
           Powering Your Future with Excellence
         </motion.h1>
-        <div className='w-[120px] h-[6px] bg-yellow-500'></div>
+        <div className='w-[120px] h-[6px] bg-secondary'></div>
         <p className='text-white text-[20px]'>
-          At MG Construction & Electrical INC., we specialize in delivering
+          At MG Construction & Electrical INC, we specialize in delivering
           top-quality electrical services for residential, commercial, and
           industrial projects. From installations to maintenance, we ensure
           your systems are safe, efficient, and reliable.
@@ -47,13 +47,13 @@ const Hero = () => {
         >
           <motion.button
             variants={zoomInVariants}
-            className='bg-yellow-500 hover:bg-white hover:text-black px-10 py-3 rounded-lg text-black font-bold'
+            className='bg-primary hover:bg-hover text-white px-10 py-3 rounded-lg  font-bold'
           >
             OUR SERVICES
           </motion.button>
           <motion.button
             variants={zoomInVariants}
-            className='border-white hover:border-yellow-500 hover:text-yellow-500 border-2 px-10 py-3 rounded-lg text-white font-bold'
+            className='border-white hover:border-primary hover:text-primary border-2 px-10 py-3 rounded-lg text-white font-bold'
           >
             CONTACT US
           </motion.button>
