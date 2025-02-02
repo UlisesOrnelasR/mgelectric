@@ -89,10 +89,10 @@ export const clients = [
   },
   {
     image: client2,
-    name: "Drew James",
+    name: "Sergio Miller",
     about:
-      "Their expertise in industrial electrical systems is unmatched. They completed our project on time and within budget.",
-    post: "Factory Manager",
+      "Their attention to detail and professionalism made our home renovation project seamless. The lighting design was perfect!",
+    post: "Interior Designer",
   },
   {
     image: client3,
