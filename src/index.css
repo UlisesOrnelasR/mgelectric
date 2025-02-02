@@ -10,4 +10,30 @@
 
 body {
   background-color: rgb(36, 33, 33);
+  /* Personalización de la barra de desplazamiento para navegadores WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Color del fondo de la barra */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B3F79; /* Color del scroll */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1B3F79; /* Cambio de color al pasar el mouse */
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1B3F79 #1a1a1a;
+}
+
+
 }
