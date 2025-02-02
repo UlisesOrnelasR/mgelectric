@@ -61,18 +61,20 @@ const Portfolio = () => {
         initial="hidden"
         whileInView="visible"
         variants={zoomInVariants}
-        className='w-full m-auto grid lg:grid-cols-4 grid-cols-2 gap-4 p-4 h-[600px] overflow-y-auto'
+        className="w-full m-auto grid lg:grid-cols-4 grid-cols-2 gap-4 p-4 
+             h-[500px] sm:h-[600px] overflow-y-auto"
       >
         {projects.map((project, index) => (
           <Zoom key={index}>
             <img
               src={project}
               alt={`project ${index + 1}`}
-              className='h-full w-full object-cover rounded-lg cursor-pointer'
+              className="h-full w-full object-cover rounded-lg cursor-pointer"
             />
           </Zoom>
         ))}
       </motion.div>
+
     </div>
   );
 };
