@@ -1,4 +1,3 @@
-import React from 'react';
 import project1 from '../assets/project1.jpg';
 import project2 from '../assets/project2.jpg';
 import project3 from '../assets/project3.jpg';
@@ -28,12 +27,14 @@ const Portfolio = () => {
     project7,
     project8,
     project7,
-    project8, project8,
-    project7,
+    project8,
     project8,
     project7,
     project8,
-    project8, project8,
+    project7,
+    project8,
+    project8,
+    project8,
     project7,
     project8,
     project7,
@@ -41,17 +42,18 @@ const Portfolio = () => {
   ];
 
   return (
-    <div id='projects' className='w-full'>
+    <div id='projects' className='w-full bg-gray-900 py-12'>
+      {/* Sección de título */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className='lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]'
+        className='lg:w-[80%] w-[90%] m-auto mb-12 flex flex-col justify-between items-center gap-6'
       >
-        <motion.h1 variants={slideUpVariants} className='text-secondary text-2xl'>
+        <motion.h1 variants={slideUpVariants} className='text-secondary text-3xl font-semibold'>
           PORTFOLIO
         </motion.h1>
-        <motion.h1 variants={slideUpVariants} className='text-white uppercase text-[40px] font-bold text-center'>
+        <motion.h1 variants={slideUpVariants} className='text-white uppercase text-4xl lg:text-5xl font-bold text-center'>
           OUR BEST PROJECTS
         </motion.h1>
         <motion.div variants={slideUpVariants} className='w-[120px] h-[6px] bg-secondary'></motion.div>
@@ -61,20 +63,24 @@ const Portfolio = () => {
         initial="hidden"
         whileInView="visible"
         variants={zoomInVariants}
-        className="w-full m-auto grid lg:grid-cols-4 grid-cols-2 gap-4 p-4 
-             h-[500px] sm:h-[600px] overflow-y-auto"
+        className="w-full m-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6 p-4 
+             h-[500px] sm:h-[500px] overflow-y-auto scrollbar-hide"
       >
         {projects.map((project, index) => (
           <Zoom key={index}>
-            <img
-              src={project}
-              alt={`project ${index + 1}`}
-              className="h-full w-full object-cover rounded-lg cursor-pointer"
-            />
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
+            >
+              <img
+                src={project}
+                alt={`project ${index + 1}`}
+                className="h-full w-full object-cover transform transition-transform duration-300 hover:scale-110"
+              />
+            </motion.div>
           </Zoom>
         ))}
       </motion.div>
-
     </div>
   );
 };
