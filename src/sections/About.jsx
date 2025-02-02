@@ -5,7 +5,7 @@ import videoFile from '../assets/ejemplo.mp4';
 
 const About = () => {
   return (
-    <div className='lg:w-[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-start gap-[50px]' id='about'>
+    <div className='lg:w-[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-center gap-[50px]' id='about'>
       <motion.div
         initial="hidden"
         whileInView="visible"
