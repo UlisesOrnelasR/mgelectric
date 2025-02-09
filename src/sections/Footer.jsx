@@ -17,7 +17,7 @@ const Footer = () => {
               </li>
               <li className='flex items-center gap-3'>
                 <FaEnvelope className='text-primary' />
-                <span>info@primestructures.com</span>
+                <span>services@mgelectricalinc.com</span>
               </li>
               <li className='flex items-center gap-3'>
                 <FaMapMarkerAlt className='text-primary' />

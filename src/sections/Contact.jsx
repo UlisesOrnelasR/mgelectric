@@ -22,7 +22,7 @@ const Contact = () => {
             whileInView="visible"
             variants={zoomInVariants}
             action="" className='flex flex-col justify-center items-start gap-4 w-full'>
-            <input type="text" placeholder='Enter Fullname' className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full' />
+            <input type="text" placeholder='Enter name' className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full' />
             <input type="email" placeholder='Enter Email' className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full' />
             <input type="number" placeholder='Enter Mobile Number' className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full' />
             <textarea name="" id="" placeholder='Your Message' rows="4" className='px-6 py-3 border-[2px] border-black text-black rounded-lg w-full'></textarea>
