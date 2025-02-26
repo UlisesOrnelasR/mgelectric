@@ -6,5 +6,21 @@
     "projects": "Proyectos",
     "contact": "Contacto",
     "bookNow": "RESERVAR AHORA"
+  },
+  "header": {
+    "title": "TUS SOCIOS ELÉCTRICOS DE CONFIANZA",
+    "subtitle": "Impulsando Tu Futuro con Excelencia",
+    "txt": "En MG Construction & Electrical INC, nos especializamos en brindar servicios eléctricos de alta calidad para proyectos residenciales, comerciales e industriales. Desde instalaciones hasta mantenimiento, garantizamos que tus sistemas sean seguros, eficientes y confiables.",
+    "btnServices": "NUESTROS SERVICIOS",
+    "btnContact": "CONTÁCTANOS"
+  },
+  "aboutUs": {
+    "title": "ASOBRE NOSOTROS",
+    "subtitle": "Impulsando Tu Futuro",
+    "txt": "En MG Construction & Electrical INC., nos especializamos en brindar servicios eléctricos de alta calidad para proyectos residenciales, comerciales e industriales. Con más de 25 años de experiencia, garantizamos que tus sistemas sean seguros, eficientes y confiables.",
+    "pc": "Proyectos Completados",
+    "ye": "Años de Experiencia",
+    "lm": "MÁS INFORMACIÓN",
+    "fq": "OBTÉN UNA COTIZACIÓN GRATIS"
   }
 }

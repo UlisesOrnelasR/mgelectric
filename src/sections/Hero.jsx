@@ -2,8 +2,11 @@ import electricianImage from '../assets/electrician-hero.jpg';
 import backgroundImage from '../assets/electrician-bg2.jpg';
 import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t, } = useTranslation('global');
+
   return (
     <div
       id='hero'
@@ -24,20 +27,23 @@ const Hero = () => {
           variants={slideUpVariants}
           className='text-secondary text-2xl'
         >
-          YOUR TRUSTED ELECTRICAL PARTNERS
+          {
+            t("header.title")
+          }
         </motion.h1>
         <motion.h1
           variants={slideUpVariants}
           className='text-white uppercase text-[50px] font-bold'
         >
-          Powering Your Future with Excellence
+          {
+            t("header.subtitle")
+          }
         </motion.h1>
         <div className='w-[120px] h-[6px] bg-secondary'></div>
         <p className='text-white text-[20px]'>
-          At MG Construction & Electrical INC, we specialize in delivering
-          top-quality electrical services for residential, commercial, and
-          industrial projects. From installations to maintenance, we ensure
-          your systems are safe, efficient, and reliable.
+          {
+            t("header.txt")
+          }
         </p>
         <motion.div
           initial='hidden'
@@ -49,13 +55,17 @@ const Hero = () => {
             variants={zoomInVariants}
             className='bg-primary hover:bg-hover text-white px-10 py-3 rounded-lg  font-bold'
           >
-            OUR SERVICES
+            {
+              t("header.btnServices")
+            }
           </motion.button>
           <motion.button
             variants={zoomInVariants}
             className='border-white hover:border-primary hover:text-primary border-2 px-10 py-3 rounded-lg text-white font-bold'
           >
-            CONTACT US
+            {
+              t("header.btnContact")
+            }
           </motion.button>
         </motion.div>
       </motion.div>
