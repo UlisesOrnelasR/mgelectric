@@ -3,9 +3,10 @@ import backgroundImage from '../assets/electrician-bg2.jpg';
 import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
-  const { t, } = useTranslation('global');
+  const { t } = useTranslation('global');
 
   return (
     <div
@@ -51,22 +52,26 @@ const Hero = () => {
           variants={zoomInVariants}
           className='flex justify-center items-center gap-5'
         >
-          <motion.button
-            variants={zoomInVariants}
-            className='bg-primary hover:bg-hover text-white px-10 py-3 rounded-lg  font-bold'
+          <Link to="services"
+            spy={true}
+            offset={-100}
+            smooth={true}
+            className='cursor-pointer bg-primary hover:bg-hover text-white px-10 py-3 rounded-lg  font-bold'
           >
             {
               t("header.btnServices")
             }
-          </motion.button>
-          <motion.button
-            variants={zoomInVariants}
-            className='border-white hover:border-primary hover:text-primary border-2 px-10 py-3 rounded-lg text-white font-bold'
+          </Link>
+          <Link to="contact"
+            spy={true}
+            offset={-100}
+            smooth={true}
+            className='cursor-pointer border-white hover:border-primary hover:text-primary border-2 px-10 py-3 rounded-lg text-white font-bold'
           >
             {
               t("header.btnContact")
             }
-          </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
 

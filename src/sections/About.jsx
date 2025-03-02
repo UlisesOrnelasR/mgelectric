@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { slideUpVariants } from './animation';
 import { useTranslation } from 'react-i18next';
 import panels from '../assets/panels.jpg'; // Importa la imagen panels
+import { Link } from 'react-scroll';
 
 const About = () => {
   const { t } = useTranslation('global');
@@ -36,21 +37,24 @@ const About = () => {
           </div>
         </div>
         <div className='flex gap-4'>
-          <motion.button
-            variants={slideUpVariants}
-            className='bg-primary hover:bg-hover h px-10 py-3 rounded-lg text-white font-bold'
+          <Link to="services"
+            spy={true}
+            offset={-100}
+            smooth={true}
+            className='cursor-pointer bg-primary hover:bg-hover h px-10 py-3 rounded-lg text-white font-bold'
           >
             {t("aboutUs.lm")}
-          </motion.button>
-          <motion.button
-            variants={slideUpVariants}
-            className='border-primary hover:bg-hover  border-2 px-10 py-3 rounded-lg text-white font-bold'
-          >
+          </Link>
+          <Link to="contact"
+            spy={true}
+            offset={-100}
+            className='cursor-pointer bg-primary hover:bg-hover h px-10 py-3 rounded-lg text-white font-bold'
+            smooth={true} >
             {t("aboutUs.fq")}
-          </motion.button>
-        </div>
-      </motion.div>
 
+          </Link>
+        </div>
+      </motion.div >
 
       <motion.div
         initial="hidden"
@@ -64,7 +68,7 @@ const About = () => {
           className='w-full h-auto rounded-lg shadow-lg' // Ajusta los estilos según necesites
         />
       </motion.div>
-    </div>
+    </div >
   );
 };
 
