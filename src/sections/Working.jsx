@@ -5,13 +5,13 @@ import { useTranslation } from 'react-i18next';
 import { planning } from '../export';
 
 const Working = () => {
-  const { t } = useTranslation('global'); // Carga las traducciones desde el namespace 'global'
+  const { t } = useTranslation('global');
 
   const processImages = [
-    '/step.jpg',
-    '/step.jpg',
-    '/step.jpg',
-    '/step.jpg',
+    '/stepone.jpg',
+    '/steptwo.jpg',
+    '/stepthree.jpg',
+    '/stepfour.jpg',
   ];
 
   return (
@@ -57,11 +57,10 @@ const Working = () => {
         >
           {processImages.map((image, index) => (
             <div key={index} className='flex flex-col lg:flex-row items-center gap-[20px]'>
-              {/* Ocultar imágenes en móviles y mostrarlas en pantallas grandes */}
               <motion.img
                 src={image}
                 alt={`Process step ${index + 1}`}
-                className='w-[200px] h-[200px] object-cover rounded-lg shadow-lg hidden lg:block'
+                className='w-[200px] h-[200px] object-cover rounded-lg  lg:block'
                 variants={zoomInVariants}
               />
               {index < processImages.length - 1 && (
