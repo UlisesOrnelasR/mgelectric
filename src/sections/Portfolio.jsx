@@ -11,8 +11,11 @@ import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
 import Zoom from 'react-medium-image-zoom'; // Importa el componente Zoom
 import 'react-medium-image-zoom/dist/styles.css'; // Importa los estilos de la librería
+import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
+  const { t } = useTranslation('global'); // Especifica el namespace 'global'
+
   const projects = [
     project1,
     project2,
@@ -51,10 +54,10 @@ const Portfolio = () => {
         className='lg:w-[80%] w-[90%] m-auto mb-12 flex flex-col justify-between items-center gap-6'
       >
         <motion.h1 variants={slideUpVariants} className='text-secondary text-3xl font-semibold'>
-          PORTFOLIO
+          {t(`portfolio.title`)}
         </motion.h1>
         <motion.h1 variants={slideUpVariants} className='text-white uppercase text-4xl lg:text-5xl font-bold text-center'>
-          OUR BEST PROJECTS
+          {t(`portfolio.subtitle`)}
         </motion.h1>
         <motion.div variants={slideUpVariants} className='w-[120px] h-[6px] bg-secondary'></motion.div>
       </motion.div>

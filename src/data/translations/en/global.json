@@ -52,5 +52,9 @@
         "description": "We offer end-to-end construction services, from electrical design and project management to renovations and new builds."
       }
     }
+  },
+  "portfolio": {
+    "title": "PORTFOLIO",
+    "subtitle": "OUR BEST PROJECTS"
   }
 }

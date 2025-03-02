@@ -52,5 +52,9 @@
         "description": "Ofrecemos servicios de construcción de principio a fin, desde el diseño eléctrico y la gestión de proyectos hasta renovaciones y nuevas edificaciones."
       }
     }
+  },
+  "portfolio": {
+    "title": "PORTAFOLIO",
+    "subtitle": "NUESTROS MEJORES PROYECTOS"
   }
 }
