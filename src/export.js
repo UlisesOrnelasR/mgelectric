@@ -49,7 +49,6 @@ export const planning = [
       "We ensure every project is completed to the highest standards, with thorough testing and quality checks.",
   },
 ];
-
 export const clients = [
   {
     image: client1,

@@ -1,10 +1,12 @@
-import { planning } from '../export';
 import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
-import { FaArrowRight } from 'react-icons/fa'; // Importa un ícono de flecha
+import { FaArrowRight } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import { planning } from '../export';
 
 const Working = () => {
-  // Array con las rutas de las imágenes del proceso
+  const { t } = useTranslation('global'); // Carga las traducciones desde el namespace 'global'
+
   const processImages = [
     '/step.jpg',
     '/step.jpg',
@@ -21,10 +23,10 @@ const Working = () => {
         className='lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]'
       >
         <motion.h1 variants={slideUpVariants} className='text-secondary text-2xl'>
-          STEP BY STEP
+          {t('working.title')}
         </motion.h1>
         <motion.h1 variants={slideUpVariants} className='text-black uppercase text-[40px] font-bold text-center'>
-          HOW IT'S WORKING
+          {t('working.subtitle')}
         </motion.h1>
         <motion.div variants={slideUpVariants} className='w-[120px] h-[6px] bg-primary'></motion.div>
 
@@ -40,13 +42,13 @@ const Working = () => {
               <div>
                 <item.icon className='size-[80px] bg-primary fill-white p-4 rounded-full' />
               </div>
-              <h1 className='text-2xl font-bold uppercase'>{item.title}</h1>
-              <p className='text-[20px] text-center text-gray-600'>{item.about}</p>
+              <h1 className='text-2xl font-bold uppercase'>{t(`working.steps.${item.title.toLowerCase()}.title`)}</h1>
+              <p className='text-[20px] text-center text-gray-600'>{t(`working.steps.${item.title.toLowerCase()}.description`)}</p>
             </div>
           ))}
         </motion.div>
 
-        {/* Sección de las imágenes del proceso con flechas */}
+        {/* Sección de imágenes del proceso con flechas */}
         <motion.div
           initial="hidden"
           whileInView="visible"

@@ -56,5 +56,32 @@
   "portfolio": {
     "title": "PORTFOLIO",
     "subtitle": "OUR BEST PROJECTS"
+  },
+  "working": {
+    "title": "STEP BY STEP",
+    "subtitle": "HOW IT'S WORKING",
+    "steps": {
+      "planning": {
+        "title": "PLANNING",
+        "description": "We analyze project requirements and design a detailed plan to ensure success.",
+        "icon": "FaClipboardList"
+      },
+      "design": {
+        "title": "DESIGN",
+        "description": "We create innovative and efficient solutions tailored to each client.",
+        "icon": "FaPencilRuler"
+      },
+      "building": {
+        "title": "EXECUTION",
+        "description": "We implement the project with precision and high-quality standards.",
+        "icon": "FaTools"
+      },
+      "finish": {
+        "title": "DELIVERY",
+        "description": "We check every detail to ensure customer satisfaction.",
+        "icon": "FaCheckCircle"
+      }
+    },
+    "processImages": ["/step.jpg", "/step.jpg", "/step.jpg", "/step.jpg"]
   }
 }
