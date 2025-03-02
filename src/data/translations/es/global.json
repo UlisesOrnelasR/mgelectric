@@ -104,5 +104,17 @@
         "post": "Propietario de Vivienda"
       }
     ]
+  },
+  "contact": {
+    "title": "CONTÁCTANOS",
+    "subtitle": "ESCRÍBENOS PARA CUALQUIER CONSULTA",
+    "description": "¡Con más de 25 años de experiencia, ofrecemos soluciones eléctricas seguras, eficientes y confiables para todas tus necesidades!",
+    "form": {
+      "name": "Ingresa tu nombre",
+      "email": "Ingresa tu correo",
+      "phone": "Ingresa tu número de teléfono",
+      "message": "Tu mensaje",
+      "submit": "ENVIAR"
+    }
   }
 }

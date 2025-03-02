@@ -104,5 +104,17 @@
         "post": "Homeowner"
       }
     ]
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "subtitle": "REACH US FOR ANY QUERY",
+    "description": "With over 25 years of experience, we provide safe, efficient, and reliable electrical solutions for all your needs!",
+    "form": {
+      "name": "Enter name",
+      "email": "Enter Email",
+      "phone": "Enter Mobile Number",
+      "message": "Your Message",
+      "submit": "SUBMIT"
+    }
   }
 }
