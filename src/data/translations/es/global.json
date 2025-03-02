@@ -116,5 +116,28 @@
       "message": "Tu mensaje",
       "submit": "ENVIAR"
     }
+  },
+  "footer": {
+    "contact": {
+      "title": "Contacto",
+      "phone": "760 895 9017",
+      "email": "services@mgelectricalinc.com",
+      "address": "75400 Gerald Ford Dr, Palm Desert, CA"
+    },
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "home": "Inicio",
+      "about": "Sobre Nosotros",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "social": {
+      "title": "Síguenos"
+    },
+    "location": {
+      "title": "Ubicación"
+    },
+    "copyright": "Copyright 2025, MG Construction & Electrical, Todos los derechos reservados"
   }
 }

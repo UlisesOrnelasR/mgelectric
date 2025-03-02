@@ -1,57 +1,60 @@
 import { FaCopyright, FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next'; // Importar useTranslation
 
 const Footer = () => {
+  const { t } = useTranslation('global'); // Cargar las traducciones desde el namespace 'global'
+
   return (
     <>
       <footer className='bg-black text-white py-12 px-6 lg:px-16'>
         <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {/* Sección 1: Información de contacto */}
           <div className='flex flex-col gap-4'>
-            <h3 className='text-2xl font-bold text-primary'>Contacto</h3>
+            <h3 className='text-2xl font-bold text-primary'>{t('footer.contact.title')}</h3>
             <ul className='space-y-3'>
               <li className='flex items-center gap-3'>
                 <FaPhone className='text-primary' />
-                <span>760 895 9017</span>
+                <span>{t('footer.contact.phone')}</span>
               </li>
               <li className='flex items-center gap-3'>
                 <FaEnvelope className='text-primary' />
-                <span>services@mgelectricalinc.com</span>
+                <span>{t('footer.contact.email')}</span>
               </li>
               <li className='flex items-center gap-3'>
                 <FaMapMarkerAlt className='text-primary' />
-                <span>75400 Gerald Ford Dr, Palm Desert, CA</span>
+                <span>{t('footer.contact.address')}</span>
               </li>
             </ul>
           </div>
 
           {/* Sección 2: Enlaces rápidos */}
           <div className='flex flex-col gap-4'>
-            <h3 className='text-2xl font-bold text-primary'>Enlaces Rápidos</h3>
+            <h3 className='text-2xl font-bold text-primary'>{t('footer.quickLinks.title')}</h3>
             <ul className='space-y-3'>
               <li>
                 <Link to='home' spy={true} smooth={true} className='hover:text-primary cursor-pointer'>
-                  Inicio
+                  {t('footer.quickLinks.home')}
                 </Link>
               </li>
               <li>
                 <Link to='about' spy={true} smooth={true} className='hover:text-primary cursor-pointer'>
-                  Sobre Nosotros
+                  {t('footer.quickLinks.about')}
                 </Link>
               </li>
               <li>
                 <Link to='services' spy={true} smooth={true} className='hover:text-primary cursor-pointer'>
-                  Servicios
+                  {t('footer.quickLinks.services')}
                 </Link>
               </li>
               <li>
                 <Link to='projects' spy={true} smooth={true} className='hover:text-primary cursor-pointer'>
-                  Proyectos
+                  {t('footer.quickLinks.projects')}
                 </Link>
               </li>
               <li>
                 <Link to='contact' spy={true} smooth={true} className='hover:text-primary cursor-pointer'>
-                  Contacto
+                  {t('footer.quickLinks.contact')}
                 </Link>
               </li>
             </ul>
@@ -59,7 +62,7 @@ const Footer = () => {
 
           {/* Sección 3: Redes sociales */}
           <div className='flex flex-col gap-4'>
-            <h3 className='text-2xl font-bold text-primary'>Síguenos</h3>
+            <h3 className='text-2xl font-bold text-primary'>{t('footer.social.title')}</h3>
             <div className='flex gap-4'>
               <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='text-white hover:text-primary'>
                 <FaFacebook className='w-8 h-8' />
@@ -78,7 +81,7 @@ const Footer = () => {
 
           {/* Sección 4: Mapa de Google Maps */}
           <div className='flex flex-col gap-4'>
-            <h3 className='text-2xl font-bold text-primary'>Ubicación</h3>
+            <h3 className='text-2xl font-bold text-primary'>{t('footer.location.title')}</h3>
             <div className='w-full h-48 rounded-lg overflow-hidden'>
               <iframe
                 title='Google Maps'
@@ -97,7 +100,7 @@ const Footer = () => {
         <div className='border-t border-gray-700 mt-8 pt-8 text-center'>
           <div className='flex justify-center items-center gap-2'>
             <FaCopyright className='text-primary' />
-            <p className='text-lg'>Copyright 2025, MG Construction & Electrical, Todos los derechos reservados</p>
+            <p className='text-lg'>{t('footer.copyright')}</p>
           </div>
         </div>
       </footer>
