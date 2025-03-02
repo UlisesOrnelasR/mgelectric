@@ -57,10 +57,11 @@ const Working = () => {
         >
           {processImages.map((image, index) => (
             <div key={index} className='flex flex-col lg:flex-row items-center gap-[20px]'>
+              {/* Ocultar imágenes en móviles y mostrarlas en pantallas grandes */}
               <motion.img
                 src={image}
                 alt={`Process step ${index + 1}`}
-                className='w-[200px] h-[200px] object-cover rounded-lg shadow-lg'
+                className='w-[200px] h-[200px] object-cover rounded-lg shadow-lg hidden lg:block'
                 variants={zoomInVariants}
               />
               {index < processImages.length - 1 && (
