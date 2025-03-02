@@ -83,5 +83,26 @@
       }
     },
     "processImages": ["/step.jpg", "/step.jpg", "/step.jpg", "/step.jpg"]
+  },
+  "testimonials": {
+    "title": "TESTIMONIALS",
+    "subtitle": "WHAT THEY SAY ABOUT US",
+    "clients": [
+      {
+        "name": "Alex Parker",
+        "about": "MG Construction & Electrical INC. delivered exceptional service on our commercial project. Highly recommended!",
+        "post": "Business Owner"
+      },
+      {
+        "name": "Sergio Miller",
+        "about": "Their attention to detail and professionalism made our home renovation project seamless. The lighting design was perfect!",
+        "post": "Interior Designer"
+      },
+      {
+        "name": "Sam Peterson",
+        "about": "The team was professional and efficient. Our residential electrical system is now safer and more efficient.",
+        "post": "Homeowner"
+      }
+    ]
   }
 }
