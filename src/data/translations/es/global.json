@@ -22,5 +22,35 @@
     "ye": "Años de Experiencia",
     "lm": "MÁS INFORMACIÓN",
     "fq": "OBTÉN UNA COTIZACIÓN GRATIS"
+  },
+  "services": {
+    "title": "OFERTA ESPECIAL",
+    "subtitle": "NUESTROS MEJORES SERVICIOS",
+    "list": {
+      "commercial": {
+        "title": "SERVICIOS COMERCIALES",
+        "description": "Brindamos soluciones eléctricas integrales para espacios comerciales, incluyendo cableado de oficinas, iluminación y mejoras en eficiencia energética."
+      },
+      "industrial": {
+        "title": "SERVICIOS INDUSTRIALES",
+        "description": "Nuestros servicios industriales incluyen sistemas de alta tensión, cableado de maquinaria, paneles de control y mantenimiento preventivo."
+      },
+      "residential": {
+        "title": "SERVICIOS RESIDENCIALES",
+        "description": "Desde instalaciones eléctricas hasta automatización del hogar, garantizamos que tu vivienda sea segura, eficiente y cumpla con las normativas."
+      },
+      "lowVoltage": {
+        "title": "SISTEMAS DE BAJA TENSIÓN",
+        "description": "Nos especializamos en sistemas de baja tensión, incluyendo cableado de datos, instalación de redes y soluciones para hogares inteligentes."
+      },
+      "security": {
+        "title": "SISTEMAS DE SEGURIDAD",
+        "description": "Protege tu propiedad con nuestros avanzados sistemas de seguridad, que incluyen cámaras de vigilancia, control de acceso y sistemas de alarma."
+      },
+      "construction": {
+        "title": "SERVICIOS DE CONSTRUCCIÓN",
+        "description": "Ofrecemos servicios de construcción de principio a fin, desde el diseño eléctrico y la gestión de proyectos hasta renovaciones y nuevas edificaciones."
+      }
+    }
   }
 }

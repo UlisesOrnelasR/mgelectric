@@ -4,8 +4,11 @@ import { slideUpVariants, zoomInVariants } from './animation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Estilos básicos de Swiper
 import { Autoplay } from 'swiper/modules'; // Importa el módulo Autoplay
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+  const { t } = useTranslation('global');
+
   return (
     <div id='services' className='w-full bg-white'>
       <motion.div
@@ -14,8 +17,8 @@ const Services = () => {
         variants={slideUpVariants}
         className='lg:w-[80%] w-[90%] m-auto py-[60px] flex flex-col justify-between items-center gap-[20px]'
       >
-        <motion.h1 variants={slideUpVariants} className='text-secondary text-2xl'>SPECIAL OFFER</motion.h1>
-        <motion.h1 variants={slideUpVariants} className='text-black uppercase text-[40px] font-bold text-center'>OUR BEST SERVICES</motion.h1>
+        <motion.h1 variants={slideUpVariants} className='text-secondary text-2xl'>{t(`services.title`)}</motion.h1>
+        <motion.h1 variants={slideUpVariants} className='text-black uppercase text-[40px] font-bold text-center'>{t(`services.subtitle`)}</motion.h1>
         <motion.div variants={slideUpVariants} className='w-[120px] h-[6px] bg-primary'></motion.div>
 
         <motion.div
@@ -48,11 +51,11 @@ const Services = () => {
               <SwiperSlide key={index}>
                 <motion.div variants={zoomInVariants} className='flex justify-center items-start gap-5 p-8'>
                   <div>
-                    <img src={item.icon} alt="services icon" className='w-[140px] border-2 border-primary  rounded-lg p-2' />
+                    <img src={item.icon} alt="services icon" className='w-[140px] border-2 border-primary rounded-lg p-2' />
                   </div>
                   <div className='flex flex-col justify-center items-start gap-3'>
-                    <h1 className='text-xl font-bold text-black'>{item.title}</h1>
-                    <p className='text-[18px]'>{item.about}</p>
+                    <h1 className='text-xl font-bold text-black'>{t(`services.list.${item.key}.title`)}</h1>
+                    <p className='text-[18px]'>{t(`services.list.${item.key}.description`)}</p>
                   </div>
                 </motion.div>
               </SwiperSlide>

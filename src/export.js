@@ -14,43 +14,14 @@ import client2 from "../src/assets/client2.png";
 import client3 from "../src/assets/client3.png";
 
 export const allservices = [
-  {
-    icon: building,
-    title: "COMMERCIAL SERVICES",
-    about:
-      "We provide comprehensive electrical solutions for commercial spaces, including office wiring, lighting, and energy efficiency upgrades.",
-  },
-  {
-    icon: industrial,
-    title: "INDUSTRIAL SERVICES",
-    about:
-      "Our industrial services include high-voltage systems, machinery wiring, control panels, and preventive maintenance.",
-  },
-  {
-    icon: residential,
-    title: "RESIDENTIAL SERVICES",
-    about:
-      "From electrical installations to home automation, we ensure your home is safe, efficient, and up to code.",
-  },
-  {
-    icon: lowVoltage,
-    title: "LOW VOLTAGE SYSTEMS",
-    about:
-      "We specialize in low-voltage systems, including data cabling, network installations, and smart home solutions.",
-  },
-  {
-    icon: security,
-    title: "SECURITY SYSTEMS",
-    about:
-      "Protect your property with our advanced security systems, including surveillance cameras, access control, and alarm systems.",
-  },
-  {
-    icon: construction,
-    title: "CONSTRUCTION SERVICES",
-    about:
-      "We offer end-to-end construction services, from electrical design and project management to renovations and new builds.",
-  },
+  { icon: building, key: "commercial" },
+  { icon: industrial, key: "industrial" },
+  { icon: residential, key: "residential" },
+  { icon: lowVoltage, key: "lowVoltage" },
+  { icon: security, key: "security" },
+  { icon: construction, key: "construction" },
 ];
+
 
 export const planning = [
   {

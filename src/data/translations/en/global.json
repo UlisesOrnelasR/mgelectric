@@ -22,5 +22,35 @@
     "ye": "Years of Experience",
     "lm": "LEARN MORE",
     "fq": "GET A FREE QUOTE"
+  },
+  "services": {
+    "title": "SPECIAL OFFER",
+    "subtitle": "OUR BEST SERVICES",
+    "list": {
+      "commercial": {
+        "title": "COMMERCIAL SERVICES",
+        "description": "We provide comprehensive electrical solutions for commercial spaces, including office wiring, lighting, and energy efficiency upgrades."
+      },
+      "industrial": {
+        "title": "INDUSTRIAL SERVICES",
+        "description": "Our industrial services include high-voltage systems, machinery wiring, control panels, and preventive maintenance."
+      },
+      "residential": {
+        "title": "RESIDENTIAL SERVICES",
+        "description": "From electrical installations to home automation, we ensure your home is safe, efficient, and up to code."
+      },
+      "lowVoltage": {
+        "title": "LOW VOLTAGE SYSTEMS",
+        "description": "We specialize in low-voltage systems, including data cabling, network installations, and smart home solutions."
+      },
+      "security": {
+        "title": "SECURITY SYSTEMS",
+        "description": "Protect your property with our advanced security systems, including surveillance cameras, access control, and alarm systems."
+      },
+      "construction": {
+        "title": "CONSTRUCTION SERVICES",
+        "description": "We offer end-to-end construction services, from electrical design and project management to renovations and new builds."
+      }
+    }
   }
 }
