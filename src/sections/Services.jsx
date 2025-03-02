@@ -10,7 +10,7 @@ const Services = () => {
   const { t } = useTranslation('global');
 
   return (
-    <div id='services' className='w-full bg-white'>
+    <div id='services' className='w-full bg-white overflow-hidden'>
       <motion.div
         initial="hidden"
         whileInView="visible"

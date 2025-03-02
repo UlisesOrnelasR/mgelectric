@@ -7,7 +7,7 @@ const Testimonials = () => {
   const { t } = useTranslation('global'); // Cargar las traducciones desde el namespace 'global'
 
   return (
-    <div id='clients' className='w-full'>
+    <div id='clients' className='w-full overflow-hidden'>
       <motion.div
         initial="hidden"
         whileInView="visible"

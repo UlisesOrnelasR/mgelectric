@@ -6,7 +6,7 @@ const Contact = () => {
   const { t } = useTranslation('global'); // Cargar las traducciones desde el namespace 'global'
 
   return (
-    <div id='contact' className='bg-white w-full'>
+    <div id='contact' className='bg-white w-full overflow-hidden'>
       <div className='lg:w-[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-start gap-[50px]'>
         <motion.div
           initial="hidden"

@@ -53,7 +53,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div id='projects' className='w-full bg-gray-900 py-12'>
+    <div id='projects' className='w-full bg-gray-900 py-12 overflow-hidden'>
       {/* Sección de título */}
       <motion.div
         initial="hidden"

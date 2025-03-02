@@ -8,7 +8,7 @@ const About = () => {
   const { t } = useTranslation('global');
 
   return (
-    <div className='lg:w-[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-center gap-[50px]' id='about'>
+    <div className='overflow-hidden lg:w-[80%] w-[90%] m-auto py-[60px] flex lg:flex-row flex-col justify-between items-center gap-[50px]' id='about'>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -41,17 +41,17 @@ const About = () => {
             spy={true}
             offset={-100}
             smooth={true}
-            className='cursor-pointer bg-primary hover:bg-hover h px-10 py-3 rounded-lg text-white font-bold'
+            className='cursor-pointer bg-primary hover:bg-hover px-6 py-2 rounded-lg text-white font-bold text-sm'
           >
             {t("aboutUs.lm")}
           </Link>
           <Link to="contact"
             spy={true}
             offset={-100}
-            className='cursor-pointer bg-primary hover:bg-hover h px-10 py-3 rounded-lg text-white font-bold'
-            smooth={true} >
+            smooth={true}
+            className='cursor-pointer bg-primary hover:bg-hover px-6 py-2 rounded-lg text-white font-bold text-sm'
+          >
             {t("aboutUs.fq")}
-
           </Link>
         </div>
       </motion.div >

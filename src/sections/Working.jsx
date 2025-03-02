@@ -15,7 +15,7 @@ const Working = () => {
   ];
 
   return (
-    <div className='w-full bg-white'>
+    <div className='w-full bg-white overflow-hidden'>
       <motion.div
         initial="hidden"
         whileInView="visible"

@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       id='hero'
-      className='relative bg-black w-full lg:h-[700px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[150px] px-[20px] flex justify-between items-center lg:flex-row flex-col lg:gap-5 gap-[50px] bg-cover bg-center'
+      className='overflow-hidden relative bg-black w-full lg:h-[700px] h-fit m-auto pt-[60px] lg:pt-[0px] lg:px-[150px] px-[20px] flex justify-between items-center lg:flex-row flex-col lg:gap-5 gap-[50px] bg-cover bg-center'
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Capa oscura sobre la imagen de fondo */}
@@ -56,7 +56,7 @@ const Hero = () => {
             spy={true}
             offset={-100}
             smooth={true}
-            className='cursor-pointer bg-primary hover:bg-hover text-white px-10 py-3 rounded-lg  font-bold'
+            className='cursor-pointer bg-primary hover:bg-hover text-white px-6 py-2 rounded-lg  font-bold'
           >
             {
               t("header.btnServices")
@@ -66,7 +66,7 @@ const Hero = () => {
             spy={true}
             offset={-100}
             smooth={true}
-            className='cursor-pointer border-white hover:border-primary hover:text-primary border-2 px-10 py-3 rounded-lg text-white font-bold'
+            className='cursor-pointer border-white hover:border-primary hover:text-primary border-2 px-6 py-2 rounded-lg text-white font-bold'
           >
             {
               t("header.btnContact")
