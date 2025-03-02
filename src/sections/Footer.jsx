@@ -64,18 +64,18 @@ const Footer = () => {
           <div className='flex flex-col gap-4'>
             <h3 className='text-2xl font-bold text-primary'>{t('footer.social.title')}</h3>
             <div className='flex gap-4'>
-              <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='text-white hover:text-primary'>
+              <Link to='hero' spy={true} offset={-100} smooth={true} className='cursor-pointer text-white hover:text-primary'>
                 <FaFacebook className='w-8 h-8' />
-              </a>
-              <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='text-white hover:text-primary'>
+              </Link>
+              <Link to='hero' spy={true} offset={-100} smooth={true} className='cursor-pointer text-white hover:text-primary'>
                 <FaTwitter className='w-8 h-8' />
-              </a>
-              <a href='https://instagram.com' target='_blank' rel='noopener noreferrer' className='text-white hover:text-primary'>
+              </Link>
+              <Link to='hero' spy={true} offset={-100} smooth={true} className='cursor-pointer text-white hover:text-primary'>
                 <FaInstagram className='w-8 h-8' />
-              </a>
-              <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='text-white hover:text-primary'>
+              </Link>
+              <Link to='hero' spy={true} offset={-100} smooth={true} className='cursor-pointer text-white hover:text-primary'>
                 <FaLinkedin className='w-8 h-8' />
-              </a>
+              </Link>
             </div>
           </div>
 
