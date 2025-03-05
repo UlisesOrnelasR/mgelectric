@@ -8,12 +8,13 @@ import { contactSchema } from '../schemas/contactSchema';
 const Contact = () => {
   const { t } = useTranslation('global');
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: zodResolver(contactSchema),
   });
 
   const onSubmit = (data) => {
     console.log(data);
+    reset()
   };
 
   return (
