@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { slideUpVariants, zoomInVariants } from './animation';
 import { useTranslation } from 'react-i18next';
 import { contactSchema } from '../schemas/contactSchema';
+import { toast } from 'sonner';
 
 const Contact = () => {
   const { t } = useTranslation('global');
@@ -12,9 +13,22 @@ const Contact = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset()
+  const onSubmit = async (data) => {
+    try {
+      console.log(data);
+
+      toast.success(t('contactForm.form.successMessage'), {
+        description: t('contactForm.form.successDescription'),
+      });
+
+      reset();
+    } catch (error) {
+
+      toast.error(t('contactForm.form.errorMessage'), {
+        description: t('contactForm.form.errorDescription'),
+      });
+      console.error('Submission error:', error);
+    }
   };
 
   return (

@@ -139,5 +139,13 @@
       "title": "Ubicación"
     },
     "copyright": "Copyright 2025, MG Construction & Electrical, Todos los derechos reservados"
+  },
+  "contactForm": {
+    "form": {
+      "successMessage": "Formulario enviado correctamente",
+      "successDescription": "Gracias por contactarnos. Nos pondremos en contacto contigo pronto.",
+      "errorMessage": "Error al enviar el formulario",
+      "errorDescription": "Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo."
+    }
   }
 }

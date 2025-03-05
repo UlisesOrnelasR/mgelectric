@@ -9,6 +9,7 @@ import Portfolio from "./sections/Portfolio";
 import Services from "./sections/Services";
 import Testimonials from "./sections/Testimonials";
 import Working from "./sections/Working";
+import { Toaster } from 'sonner'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Contact />
         <Footer />
       </I18nextProvider>
+      <Toaster />
     </>
 
   )
