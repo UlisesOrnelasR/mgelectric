@@ -89,17 +89,17 @@
     "subtitle": "LO QUE DICEN DE NOSOTROS",
     "clients": [
       {
-        "name": "Alex Parker",
+        "name": "Nolan Sparks",
         "about": "MG Construction & Electrical INC. brindó un servicio excepcional en nuestro proyecto comercial. ¡Los recomiendo ampliamente!",
-        "post": "Dueño de Empresa"
+        "post": "Project Manager"
       },
       {
-        "name": "Sergio Miller",
+        "name": "Andres Saenz Jr",
         "about": "Su atención al detalle y profesionalismo hicieron que la renovación de nuestra casa fuera perfecta. ¡El diseño de iluminación fue excelente!",
-        "post": "Diseñador de Interiores"
+        "post": "General contractor"
       },
       {
-        "name": "Sam Peterson",
+        "name": "Angela",
         "about": "El equipo fue profesional y eficiente. Ahora nuestro sistema eléctrico en casa es más seguro y eficiente.",
         "post": "Propietario de Vivienda"
       }
@@ -120,9 +120,9 @@
   "footer": {
     "contact": {
       "title": "Contacto",
-      "phone": "760 895 9017",
+      "phone": "760-770-5696",
       "email": "services@mgelectricalinc.com",
-      "address": "75400 Gerald Ford Dr, Palm Desert, CA"
+      "address": "75400 Gerald Ford Dr. Suite 124 Palm Desert, CA 92211"
     },
     "quickLinks": {
       "title": "Enlaces Rápidos",
