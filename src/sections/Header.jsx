@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { link: t('TopBar.home'), path: 'home' },
+    { link: t('TopBar.home'), path: 'hero' },
     { link: t('TopBar.about'), path: 'about' },
     { link: t('TopBar.services'), path: 'services' },
     { link: t('TopBar.projects'), path: 'projects' },
