@@ -5,6 +5,7 @@ import { slideUpVariants, zoomInVariants } from './animation';
 import { useTranslation } from 'react-i18next';
 import { contactSchema } from '../schemas/contactSchema';
 import { toast } from 'sonner';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { t } = useTranslation('global');
@@ -12,15 +13,38 @@ const Contact = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data) => {
-    console.log('Datos del formulario:', data);
+  const onSubmit = async (data) => {
+    try {
+      // Configura tus credenciales de EmailJS
+      const serviceID = 'service_3tzqeey';
+      const templateID = 'template_y2z788i';
+      const publicKey = 'hlBqvw-HMuWMxkt7g';
 
-    // Mostrar notificación de éxito
-    toast.success(t('contactForm.form.successMessage'), {
-      description: t('contactForm.form.successDescription'),
-    });
+      // Envía el correo
+      await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+          to_email: 'mxornelas19@gmail.com' // Correo destino
+        },
+        publicKey
+      );
 
-    reset(); // Limpiar el formulario
+      // Mostrar notificación de éxito
+      toast.success(t('contactForm.form.successMessage'), {
+        description: t('contactForm.form.successDescription'),
+      });
+
+      reset(); // Limpiar el formulario
+    } catch (error) {
+      console.error('Error al enviar el correo:', error);
+      toast.error(t('contactForm.form.errorMessage'), {
+        description: t('contactForm.form.errorDescription'),
+      });
+    }
   };
 
   return (
