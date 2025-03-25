@@ -33,7 +33,7 @@ const Footer = () => {
             <h3 className='text-2xl font-bold text-primary'>{t('footer.quickLinks.title')}</h3>
             <ul className='space-y-3'>
               <li>
-                <Link to='home' spy={true} smooth={true} className='hover:text-primary cursor-pointer'>
+                <Link to='hero' spy={true} smooth={true} className='hover:text-primary cursor-pointer'>
                   {t('footer.quickLinks.home')}
                 </Link>
               </li>

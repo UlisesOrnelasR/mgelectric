@@ -35,8 +35,7 @@ const Testimonials = () => {
                 </p>
               </div>
               <div className='flex flex-col justify-center items-center gap-[5px]'>
-                <img src={item.image} alt="client image" className='mt-[-50px]' />
-                <h1 className='text-white text-[27px] font-semibold uppercase'>
+                <h1 className='text-white text-[27px] font-semibold uppercase mt-4'>
                   {t(`testimonials.clients.${index}.name`)} {/* Usar traducción para el nombre */}
                 </h1>
                 <h1 className='text-primary text-[22px]'>
