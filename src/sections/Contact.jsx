@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
 import { useTranslation } from 'react-i18next';
 import { contactSchema } from '../schemas/contactSchema';
@@ -8,27 +8,19 @@ import { toast } from 'sonner';
 
 const Contact = () => {
   const { t } = useTranslation('global');
-
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data) => {
-    try {
-      console.log(data);
+  const onSubmit = (data) => {
+    console.log('Datos del formulario:', data);
 
-      toast.success(t('contactForm.form.successMessage'), {
-        description: t('contactForm.form.successDescription'),
-      });
+    // Mostrar notificación de éxito
+    toast.success(t('contactForm.form.successMessage'), {
+      description: t('contactForm.form.successDescription'),
+    });
 
-      reset();
-    } catch (error) {
-
-      toast.error(t('contactForm.form.errorMessage'), {
-        description: t('contactForm.form.errorDescription'),
-      });
-      console.error('Submission error:', error);
-    }
+    reset(); // Limpiar el formulario
   };
 
   return (
