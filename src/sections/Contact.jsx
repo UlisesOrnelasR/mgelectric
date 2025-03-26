@@ -95,7 +95,7 @@ const Contact = () => {
             <motion.button
               variants={zoomInVariants}
               type='submit'
-              className='bg-primary hover:bg-hover text-white px-10 py-4 text-black font-bold rounded-lg w-full'
+              className='bg-primary hover:bg-hover text-white px-10 py-4  font-bold rounded-lg w-full'
             >
               {t('contact.form.submit')}
             </motion.button>
