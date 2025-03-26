@@ -85,7 +85,7 @@ const Footer = () => {
             <div className='w-full h-48 rounded-lg overflow-hidden'>
               <iframe
                 title='Google Maps'
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.226720859666!2d-116.35171032449567!3d33.78064297326048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dafcf4d1545247%3A0xa98179c941927cf3!2s75400%20Gerald%20Ford%20Dr%2C%20Palm%20Desert%2C%20CA%2092211!5e0!3m2!1ses!2sus!4v1738448207846!5m2!1ses!2sus'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.2303371494063!2d-116.3515486244956!3d33.780549573260494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dafcf4d6055555%3A0x637a962adef94f44!2s75400%20Gerald%20Ford%20Dr%20Suite%20124%2C%20Palm%20Desert%2C%20CA%2092211!5e0!3m2!1ses!2sus!4v1742953641220!5m2!1ses!2sus'
                 width='100%'
                 height='100%'
                 style={{ border: 0 }}
