@@ -16,16 +16,16 @@ const Contact = () => {
   const onSubmit = async (data) => {
     try {
       await emailjs.send(
-        'service_3tzqeey',
-        'template_y2z788i',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: data.name,
           from_email: data.email,
           message: data.message,
-          // to_email: 'mxornelas19@gmail.com',
-          reply_to: data.email
+          reply_to: data.email,
+          to_email: import.meta.env.VITE_EMAILJS_TO_EMAIL
         },
-        'hlBqvw-HMuWMxkt7g'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       toast.success(t('contactForm.form.successMessage'), {
