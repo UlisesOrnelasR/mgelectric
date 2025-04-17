@@ -42,24 +42,26 @@ import p41 from '../assets/p41.jpg';
 
 import { motion } from 'framer-motion';
 import { slideUpVariants, zoomInVariants } from './animation';
-import Zoom from 'react-medium-image-zoom'; // Importa el componente Zoom
-import 'react-medium-image-zoom/dist/styles.css'; // Importa los estilos de la librería
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
   const { t } = useTranslation('global');
   const projects = [
-    p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41
+    p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16,
+    p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30,
+    p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41
   ];
 
   return (
-    <div id='projects' className='w-full bg-gray-900 py-12 overflow-hidden'>
-      {/* Sección de título */}
+    <div id='projects' className='w-full bg-gray-900 py-16 overflow-hidden'>
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={slideUpVariants}
-        className='lg:w-[80%] w-[90%] m-auto mb-12 flex flex-col justify-between items-center gap-6'
+        viewport={{ once: true }}
+        className='lg:w-[80%] w-[90%] mx-auto mb-16 flex flex-col justify-between items-center gap-6'
       >
         <motion.h1 variants={slideUpVariants} className='text-secondary text-3xl font-semibold'>
           {t(`portfolio.title`)}
@@ -74,24 +76,42 @@ const Portfolio = () => {
         initial="hidden"
         whileInView="visible"
         variants={zoomInVariants}
-        className="w-full m-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6 p-4 
-             h-[500px] sm:h-[500px] overflow-y-auto scrollbar-hide"
+        viewport={{ once: true }}
+        className="w-[90%] max-w-7xl mx-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6 p-4 
+                  h-[70vh] overflow-y-auto custom-scrollbar"
       >
         {projects.map((project, index) => (
           <Zoom key={index}>
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative overflow-hidden rounded-lg shadow-xl cursor-pointer group"
+              style={{
+                aspectRatio: '1/1',
+                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3)'
+              }}
             >
               <img
                 src={project}
-                alt={`project ${index + 1}`}
-                className="h-full w-full object-cover transform transition-transform duration-300 hover:scale-110"
+                alt={`Project ${index + 1}`}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" // Carga diferida para mejor performance
               />
+              {/* Overlay con número de proyecto */}
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                <span className="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  #{index + 1}
+                </span>
+              </div>
             </motion.div>
           </Zoom>
         ))}
       </motion.div>
+
+      {/* Contador de proyectos
+      <div className="text-gray-400 text-center mt-6 text-sm">
+        Showing {projects.length} projects
+      </div> */}
     </div>
   );
 };
