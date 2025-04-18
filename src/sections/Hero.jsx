@@ -102,13 +102,13 @@ const Hero = () => {
             className='text-white text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight'
           >
             <span itemProp="makesOffer">{t("header.subtitle")}</span> in{' '}
-            <span className='text-primary'>Indio, CA</span> and Coachella Valley
+            <span className='text-primary'>Palm Desert</span> and Coachella Valley
           </motion.h1>
 
           <div className='w-28 h-1.5 bg-secondary'></div>
 
           <p className='text-white text-lg md:text-xl lg:text-[20px] leading-relaxed' itemProp="description">
-            {t("header.txt")} Serving the Coachella Valley including Indio, Palm Desert, La Quinta, and surrounding areas since 1999.
+            {t("header.txt")}
           </p>
 
           <motion.div
@@ -153,7 +153,7 @@ const Hero = () => {
           >
             <img
               src={electricianImage}
-              alt={`Licensed electrician from MG Construction & Electrical INC working on residential wiring in Indio, CA`}
+              alt={`Licensed electrician from MG Construction & Electrical INC working on residential wiring in Palm Desert, CA`}
               className='lg:h-[500px] lg:w-[500px] h-[350px] w-[350px] rounded-lg object-cover shadow-xl'
               itemProp="image"
               loading="eager"
@@ -173,7 +173,7 @@ const Hero = () => {
             <div className='absolute -top-6 -right-6 bg-white p-3 rounded-lg shadow-lg'>
               <div className='text-center'>
                 <div className='text-primary text-xl font-bold'>Licensed</div>
-                <div className='text-xs font-medium text-gray-800'>CA #1234567</div>
+                <div className='text-xs font-medium text-gray-800'>CA #1078222</div>
               </div>
             </div>
           </motion.figure>
