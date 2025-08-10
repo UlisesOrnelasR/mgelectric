@@ -1,8 +1,8 @@
 // src/App.jsx
 import { I18nextProvider } from "react-i18next";
 import i18n from "./config/i18n";
+import { HelmetProvider } from "react-helmet-async";
 
-// Secciones
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -12,6 +12,7 @@ import Working from "./sections/Working";
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+
 import Seo from "./componets/Seo";
 import { Toaster } from "sonner";
 
@@ -58,7 +59,7 @@ const electricianLd = {
   }
 };
 
-/** JSON-LD global: buscador interno  */
+/** JSON-LD global: buscador interno (opcional) */
 const websiteLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -73,25 +74,26 @@ const websiteLd = {
 export default function App() {
   return (
     <>
-      <I18nextProvider i18n={i18n}>
-        {/* SEO de la landing: se declara una sola vez */}
-        <Seo
-          path="/"
-          title="MG C&E Inc | Electricistas en Palm Desert 24/7"
-          description="Electricistas en Palm Desert: instalaciones, mantenimiento y emergencias 24/7. Presupuestos sin costo."
-          jsonLd={[electricianLd, websiteLd]}
+      <HelmetProvider>
+        <I18nextProvider i18n={i18n}>
+          <Seo
+            path="/"
+            title="MG C&E Inc | Electricistas en Palm Desert 24/7"
+            description="Electricistas en Palm Desert: instalaciones, mantenimiento y emergencias 24/7. Presupuestos sin costo."
+            jsonLd={[electricianLd, websiteLd]}
+          />
 
-        />
-        <Header />
-        <Hero />
-        <About />
-        <Services />
-        <Portfolio />
-        <Working />
-        <Testimonials />
-        <Contact />
-        <Footer />
-      </I18nextProvider>
+          <Header />
+          <Hero />
+          <About />
+          <Services />
+          <Portfolio />
+          <Working />
+          <Testimonials />
+          <Contact />
+          <Footer />
+        </I18nextProvider>
+      </HelmetProvider>
       <Toaster />
     </>
   );
