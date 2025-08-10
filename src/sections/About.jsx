@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { slideUpVariants } from './animation';
 import { useTranslation } from 'react-i18next';
-import panels from '../assets/panels.jpg'; // Importa la imagen panels
+import panels from '../assets/panels.jpg';
 import { Link } from 'react-scroll';
 
 const About = () => {
@@ -65,7 +65,7 @@ const About = () => {
         <img
           src={panels}
           alt="Panels"
-          className='w-full h-auto rounded-lg shadow-lg' // Ajusta los estilos según necesites
+          className='w-full h-auto rounded-lg shadow-lg'
         />
       </motion.div>
     </div >
